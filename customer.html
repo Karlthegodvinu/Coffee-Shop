@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Information</title>
+    <style>
+        /* General Reset */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #4d4d4d;
+            background: url('coffee-background.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px 20px;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.2rem;
+        }
+
+        .navbar a:hover {
+            color: #f7f5f2;
+            text-shadow: 0 0 5px #fff;
+        }
+
+        main {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #6f4e37;
+            margin-bottom: 20px;
+        }
+
+        .customer-info {
+            margin-top: 20px;
+        }
+
+        .customer-info input {
+            padding: 15px;
+            font-size: 1.1rem;
+            border: 2px solid #8a3f3f;
+            border-radius: 20px;
+            width: 80%;
+            max-width: 400px;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .customer-info input:focus {
+            outline: none;
+            border-color: #6f4e37;
+            background-color: #f0e3c4;
+        }
+
+        .customer-info button {
+            padding: 15px;
+            font-size: 1.1rem;
+            border: none;
+            background-color: #8a3f3f;
+            color: white;
+            border-radius: 20px;
+            cursor: pointer;
+            width: 80%;
+            max-width: 400px;
+            transition: background-color 0.3s;
+        }
+
+        .customer-info button:hover {
+            background-color: #6f4e37;
+        }
+
+        .back-button {
+            background-color: #ccc;
+        }
+
+        .back-button:hover {
+            background-color: #bbb;
+        }
+
+        .customer-info label {
+            font-size: 1.2rem;
+            color: #6f4e37;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="#">Products</a>
+            <a href="#">About Us</a>
+            <a href="customer.html">Order</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Enter Your Details</h1>
+        <section class="customer-info">
+            <label for="full-name">Full Name:</label>
+            <input type="text" id="full-name" placeholder="Enter your full name" required>
+            <button onclick="proceedToCoffeeList()">Go to Coffee List</button>
+            <button class="back-button" onclick="window.history.back()">Go Back</button>
+        </section>
+    </main>
+
+    <!-- Add the confetti script -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.0/dist/confetti.browser.min.js"></script>
+    <script>
+        // Focus on the input field when the page loads
+        window.onload = function() {
+            document.getElementById('full-name').focus();
+        };
+
+        function proceedToCoffeeList() {
+            const fullName = document.getElementById('full-name').value.trim();
+            if (fullName) {
+                localStorage.setItem('customerName', fullName); // Store customer name
+                window.location.href = 'coffee-list.html'; // Navigate to coffee list page
+            } else {
+                alert('Don\'t be in a hurry, the coffee is waiting for you but you need to introduce yourself to it with your name!');
+            }
+        }
+    </script>
+
+</body>
+</html>

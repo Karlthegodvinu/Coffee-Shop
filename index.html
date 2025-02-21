@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Coffee Service</title>
+    
+    <!-- Firebase SDK -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-analytics.js";
+        import { getAuth } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
+
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyDpTW1tmDlJFKjnOwo0Os-8ywFnp367vjo",
+            authDomain: "coffeeshop-f47a5.firebaseapp.com",
+            databaseURL: "https://coffeeshop-f47a5-default-rtdb.firebaseio.com",
+            projectId: "coffeeshop-f47a5",
+            storageBucket: "coffeeshop-f47a5.appspot.com",
+            messagingSenderId: "626955984129",
+            appId: "1:626955984129:web:8c05c8811cb021381d0f00",
+            measurementId: "G-M5RGDL5978"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const auth = getAuth(app);
+
+        console.log("Firebase initialized successfully");
+    </script>
+
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #4d4d4d;
+            background: url('coffee-background.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px 20px;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.2rem;
+        }
+
+        .navbar a:hover {
+            color: #f7f5f2;
+            text-shadow: 0 0 5px #fff;
+        }
+
+        main {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #6f4e37;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #f7f5f2;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            ul li {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="product.html">Products</a>
+            <a href="#">About Us</a>
+            <a href="customer.html">Order</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Welcome to Online Coffee Service</h1>
+        <p>Start your day with the perfect cup of coffee!</p>
+        <ul>
+            <li>Life is too short for bad coffee.</li>
+            <li>Good friends and great coffee make the perfect blend.</li>
+            <li>Happiness is a warm cup of coffee.</li>
+            <li>Life without coffee is like a broken pencil - pointless.</li>
+            <li>The best coffees are the ones that taste like a conversation.</li>
+            <li>Coffee is the universal language.</li>
+            <li>I love the smell of fresh coffee in the morning.</li>
+            <li>Coffee is a beverage that puts one to sleep when not drank.</li>
+        </ul>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Online Coffee Service. Brewed with love.</p>
+    </footer>
+</body>
+</html>
