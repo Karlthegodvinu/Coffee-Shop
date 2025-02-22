@@ -1,6 +1,6 @@
 # Coffee Shop
 My project Coffee Shop is simple frontend project consisting of HTML, CSS and JavaScript.
-Used fpr purchasing coffee .
+Used for purchasing coffee.
 
 # Languages used in the above project are - 
 HTML, CSS, JavaScript
